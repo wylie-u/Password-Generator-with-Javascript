@@ -9,8 +9,7 @@ var sym = '!@#$%^&*=-_';
 // use allChars in main function
 
 
-// create a prompt that asks user to create a password
-//window.alert("Please enter a password");
+
 
 
 // Write password to the #password input
