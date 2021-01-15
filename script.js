@@ -37,8 +37,8 @@ var i= 0; i < pwLength; i++
 
 
 // password must be a minimum of eight (8) characters in length and a maximum of 128 characters in length.
-
-var pwLength = parseIntprompt("Please enter the length of your password in a numerical value. Passwords must be at least eight characters and no bigger than 128 characters.")
+//parseInt
+var pwLength = prompt("Please enter the length of your password in a numerical value. Passwords must be at least eight characters and no bigger than 128 characters.")
 
 //if pwLength is less than 8 or more than 128 characters
 //then re-run the function
