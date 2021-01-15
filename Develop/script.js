@@ -72,8 +72,7 @@ else {
 // if (special)
 // if password doesnt contain this, window prompt showing error 
 
-  // a password is going to get returned after we have answered all prompts
-  //return "Hello";
+  
 }
 
 // Add event listener to generate button
