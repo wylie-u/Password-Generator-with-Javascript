@@ -48,7 +48,7 @@ if (pwLength < 8 || pwLength > 128 || !pwLength || isNaN(pwLength) ){
 }
 var lower = window.confirm('Password includes lowercase letters?');
 if (lowerCase) {
-    allChars = oneArray.concat(lowerCase);
+    allChars = allChars.concat(lowerCase);
     console.log('include lowercase letters');
 } else {
     console.log('dont include lowercase letters.');
@@ -57,7 +57,7 @@ if (lowerCase) {
 // prompt uppercase
 var upper = window.confirm('Password includes uppercase letters?');
 if (upperCase) {
-    allChars = oneArray.concat(upperCase);
+    allChars = allChars.concat(upperCase);
     console.log('include uppercase letters');
 } else {
     console.log('dont include uppercase letters.');
