@@ -8,10 +8,6 @@ var sym = '!@#$%^&*=-_'.split("");
 function writePassword() {
     //combined array (not sure if this is correct)
     var allChars = [];
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-    
 
 // First password creation prompt    
 var pwLength = prompt("Please enter the length of your password in a numerical value. Passwords must be at least eight characters and no bigger than 128 characters.")
@@ -35,6 +31,7 @@ if (lowerCase) {
 var upper = window.confirm('Password includes uppercase letters?');
 if (upperCase) {
     allChars = allChars.concat(upperCase);
+    console.log(allchars);
     console.log('include uppercase letters');
 } else {
     console.log('dont include uppercase letters.');
@@ -43,34 +40,45 @@ if (upperCase) {
 var number = window.confirm('Password to include a number?')
 if (num) {
     allChars = allChars.concat(num);
+    console.log(allchars);
 } else {
 
 }
 // Symbols
 var symbol = window.confirm('Password includes a symbol?')
 if (sym) {
-    allChars.concat(sym);
+    allChars= allChars.concat(sym);
 } else {
 
 }
 
-}
+
 
 // Generate Password Function with For Loop 
-function generatePassword() {
+    var generatePassword = function() {
     // global array with no value 
-    var allChars = [];
+    var finalpw = [];
     //create for loop for values to pass through
-    for (var i = 8; i < pwLength; i++) {
-      password += allChars.charAt(Math.floor(Math.random()*allChars.pwlength));
-      results.push(allChars[randomNumber]);
+    for (var i = 0; i < pwLength; i++) {
+      var pw = (Math.floor(Math.random()*allChars.length));
+      finalpw.push(allChars[pw]);
       
     }
-    return;
-}   
+    return finalpw.join("");
+} 
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+    
+
+}
+
 
 
   generateBtn.addEventListener("click", writePassword);
+
+
+  // try and put a math.random in if statement 
 
   // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
