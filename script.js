@@ -24,16 +24,16 @@ function writePassword() {
 }
 
 function generatePassword(){
-
-// global array
+// global array with no value 
 var allChars = [];
-var i= 0; i < pwLength; i++
+//create for loop for values to pass through
+for (var i= 8; i < pwLength; i++) {
+  password += allcharacters.charAt(Math.floor(Math.random()*allcharacters.length))
+}
 // math random math floor function
 // var randomNumber = math.floor(mathrandom)
 //results.push 
 // results.join
-// THEN I am presented with a series of prompts for password criteria
-// i need to create prompts to show password criteria 
 
 
 // password must be a minimum of eight (8) characters in length and a maximum of 128 characters in length.
@@ -46,7 +46,24 @@ if (pwLength < 8 || pwLength > 128 || !pwLength || isNaN(pwLength) ){
   alert("The length needs to be a number between 8-128. Please re-enter a new number");
   generatePassword();
 }
-else {
+var lower = window.confirm('Password includes lowercase letters?');
+if (lowerCase) {
+    allChars = oneArray.concat(lowerCase);
+    console.log('include lowercase letters');
+} else {
+    console.log('dont include lowercase letters.');
+}
+
+// prompt uppercase
+var upper = window.confirm('Password includes uppercase letters?');
+if (upperCase) {
+    allChars = oneArray.concat(upperCase);
+    console.log('include uppercase letters');
+} else {
+    console.log('dont include uppercase letters.');
+}
+}
+
   //allChars += char;
   //allChars += num;
   //if user wants to include char in their pw
@@ -58,7 +75,7 @@ else {
 // Digit (0-9)
 // Special character (~`!@#$%^&*()+=_-{}[]\|:;”’?/<>,.)
 
-}
+
 
 // for loop
   // concat 
@@ -73,7 +90,7 @@ else {
 // if password doesnt contain this, window prompt showing error 
 
   
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
