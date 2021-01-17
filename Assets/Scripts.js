@@ -1,4 +1,4 @@
-// Assignment Code
+// Password variables
 var generateBtn = document.querySelector("#generate");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("")
@@ -6,10 +6,10 @@ var num = '0123456789'.split("");
 var sym = '!@#$%^&*=-_'.split("");
 
 function writePassword() {
-    //combined array (not sure if this is correct)
+    //combined array 
     var allChars = [];
 
-// First password creation prompt    
+// Password creation prompt   
 var pwLength = prompt("Please enter the length of your password in a numerical value. Passwords must be at least eight characters and no bigger than 128 characters.")
 
 //if pwLength is less than 8 or more than 128 characters
@@ -18,41 +18,39 @@ if (pwLength < 8 || pwLength > 128 || !pwLength || isNaN(pwLength) ){
   alert("The length needs to be a number between 8-128. Please re-enter a new number");
   writePassword();
 }
-// lowercase letters
-var lower = window.confirm('Password includes lowercase letters?');
+// lowercase letters prompt
+var lower = confirm('Password to include lowercase letters? Okay for yes, Cancel for no.');
 if (lowerCase) {
     allChars = allChars.concat(lowerCase);
-    console.log('include lowercase letters');
+    console.log(allChars);
 } else {
-    console.log('dont include lowercase letters.');
+    console.log('dont include lowercase letters');
 }
 
-// uppercase letters
-var upper = window.confirm('Password includes uppercase letters?');
+// uppercase letters prompt
+var upper = confirm('Password to include uppercase letters? Okay for yes, Cancel for no.');
 if (upperCase) {
     allChars = allChars.concat(upperCase);
-    console.log(allchars);
-    console.log('include uppercase letters');
+    console.log(allChars);
 } else {
     console.log('dont include uppercase letters.');
 }
-// numbers 
-var number = window.confirm('Password to include a number?')
+// numbers prompt
+var number = confirm('Password to include a number? Okay for yes, Cancel for no.')
 if (num) {
     allChars = allChars.concat(num);
-    console.log(allchars);
+    console.log(allChars);
 } else {
 
 }
-// Symbols
-var symbol = window.confirm('Password includes a symbol?')
+// Symbols prompt
+var symbol = confirm('Password includes a symbol? Okay for yes, Cancel for no.')
 if (sym) {
     allChars= allChars.concat(sym);
+    console.log(allChars);
 } else {
 
 }
-
-
 
 // Generate Password Function with For Loop 
     var generatePassword = function() {
@@ -74,24 +72,9 @@ if (sym) {
 }
 
 
-
+  
   generateBtn.addEventListener("click", writePassword);
 
 
   // try and put a math.random in if statement 
 
-  // GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
