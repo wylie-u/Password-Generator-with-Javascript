@@ -36,7 +36,7 @@ if (upperCase) {
     console.log('dont include uppercase letters.');
 }
 // numbers prompt
-var number = confirm('Password to include a number? Okay for yes, Cancel for no.')
+var number = confirm('Password to include a Number? Okay for yes, Cancel for no.')
 if (num) {
     allChars = allChars.concat(num);
     console.log(allChars);
@@ -44,7 +44,7 @@ if (num) {
 
 }
 // Symbols prompt
-var symbol = confirm('Password includes a symbol? Okay for yes, Cancel for no.')
+var symbol = confirm('Password includes a Symbol? Okay for yes, Cancel for no.')
 if (sym) {
     allChars= allChars.concat(sym);
     console.log(allChars);
