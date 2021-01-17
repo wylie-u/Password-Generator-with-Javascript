@@ -26,11 +26,11 @@ This is my first project that features a large portion of javascript functionali
 
 *  Initial Password Prompt
 
-![Initial Prompt](Assets/images/Initialpwprompt.png)
+![Initial Prompt](Assets/images/pw-initialprompt.png)
 
 *  Re-Enter Prompt
 
-![Re-Enter Prompt](Assets/images/pwre-enterprompt.png)
+![Re-Enter Prompt](Assets/images/pw-reEnter.png)
 
 *  Lowercase Letters
 
@@ -54,8 +54,9 @@ This is my first project that features a large portion of javascript functionali
 
 
 ## Credits
-1. https://getbootstrap.com/
+1. https://www.tutorialspoint.com/javascript/index.htm
 2. https://www.w3schools.com
+3. https://www.easyprogramming.net/javascript/js_random_password_generator.php
 
 ## License
 ...
