@@ -35,7 +35,7 @@ if (upperCase) {
 } else {
     console.log('dont include uppercase letters.');
 }
-// numbers prompt
+// Numbers prompt
 var number = confirm('Password to include a Number? Okay for yes, Cancel for no.')
 if (num) {
     allChars = allChars.concat(num);
@@ -76,5 +76,5 @@ if (sym) {
   generateBtn.addEventListener("click", writePassword);
 
 
-  // try and put a math.random in if statement 
+  
 
